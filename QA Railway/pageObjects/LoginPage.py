@@ -1,13 +1,13 @@
-class Login:
+class LoginPage():
     textbox_username_id = "username"
     textbox_password_id = "password"
-    button_login_xpath = "/html/body/div/div[2]/form/fieldset/p/input"
+    button_login_xpath = "//body/div[@id='page']/div[@id='content']/form[1]/fieldset[1]/p[1]/input[1]"
     link_logout_linktext = "Log out"
 
     def __init__(self,driver):
         self.driver=driver
 
-    def setUserName(self,username):
+    def setUserName(self, username):
             self.driver.find_element_by_id(self.textbox_username_id).clear()
             self.driver.find_element_by_id(self.textbox_username_id).send_keys(username)
 
